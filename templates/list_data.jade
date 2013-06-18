@@ -1,0 +1,12 @@
+extends 'base.jade'
+
+append top
+	h1 Mongo Admin
+
+append content
+	h2 {{db_name}} - {{collection_name}} Collections
+
+	for data in datas
+		.list-collection
+			a(href="/monitor/{{db_name}}/{{collection_name}}/{{data._id}}/delete")=data.json
+	

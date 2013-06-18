@@ -1,0 +1,12 @@
+extends 'base.jade'
+
+append top
+	h1 Mongo Admin
+
+append content
+	h2 {{db_name}} Collections
+
+	for collection in collections
+		.list-collection
+			a(href="/monitor/{{db_name}}/{{collection}}")=collection
+	

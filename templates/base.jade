@@ -1,0 +1,22 @@
+!!! 5
+html(style="height: 100%")
+	head
+		link(rel="stylesheet", href="/static/main.css")
+		block head
+		block headjs
+	body(style="height: 100%")
+		.mongo-admin
+			.main-content
+				.top
+					block top
+				table
+					tr
+						td.left-content
+							block leftcontent
+								h2 DATABASES
+								for db in dbs
+									.list-menu
+										a(href="/monitor/{{db}}")=db
+						td.content
+							block content
+		block bodyjs
