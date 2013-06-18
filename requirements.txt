@@ -1,0 +1,4 @@
+bottle
+pymongo
+pyjade
+jinja2
