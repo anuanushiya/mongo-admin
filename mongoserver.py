@@ -27,7 +27,7 @@ def api_show_collection(db_name=None):
 	return render("home.jade", loader(locals()))
 
 @route('/monitor/<db_name>/<collection_name>')
-def api_show_collection(db_name=None, collection_name=None):
+def api_show_collections(db_name=None, collection_name=None):
 	db = MongoWrapper(db_name).getCollection(collection_name)
 	datas = []
 	for d in db.find():
