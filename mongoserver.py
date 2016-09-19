@@ -46,4 +46,4 @@ def api_show_collection(db_name=None, collection_name=None, obj_id=None, action=
 			db.remove(obj)
 	redirect("/monitor/%s/%s" % (db_name,collection_name))
 
-run(host='localhost', port=8080, reloader=True)
+run(host='localhost', port=5000)
